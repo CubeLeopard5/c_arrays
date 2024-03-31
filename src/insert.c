@@ -41,9 +41,9 @@ static void insert_c(array_t *this, size_t pos, const char *str)
     int step = 0;
 
     if (pos > len) {
-        pos = len;
+        pos = len - 1;
     }
-    for (size_t i = 0; this->tab[i - step] != NULL; i++) {
+    for (size_t i = 0; i < len; i++) {
         if (i == pos) {
             t[i] = malloc(sizeof(char) * (my_strlen(str) + 1));
             my_strcpy(t[i], str);

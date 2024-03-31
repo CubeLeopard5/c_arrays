@@ -9,14 +9,23 @@ ARRAY_SRC	=	src/array_init.c		\
 				src/array_destroy.c		\
 				
 TEST_SRC	=	tests/at.c				\
-
-PROG_SRC	=	main.c					\
+				tests/delete.c			\
+				tests/clear.c			\
+				tests/apply.c			\
+				tests/insert.c			\
+				tests/merge.c			\
+				tests/occurrence.c		\
+				tests/push_back.c		\
+				tests/size.c			\
+				tests/sort.c			\
+				tests/to_string.c		\
+				tests/whereis.c			\
 
 NAME		=	array
 
 TEST_NAME 	=	test_array
 
-OBJS		=	$(ARRAY_SRC:.c=.o) $(PROG_SRC:.c=.o)
+OBJS		=	$(ARRAY_SRC:.c=.o)
 
 TEST_OBJS 	= $(ARRAY_SRC:.c=.o) $(TEST_SRC:.c=.o)
 
