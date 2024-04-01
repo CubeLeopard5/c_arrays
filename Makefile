@@ -23,7 +23,7 @@ TEST_SRC	=	tests/at.c				\
 
 NAME		=	array
 
-TEST_NAME 	=	test_array
+TEST_NAME 	=	array_tests
 
 OBJS		=	$(ARRAY_SRC:.c=.o)
 
