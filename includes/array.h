@@ -11,6 +11,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
+#include <string.h>
 
 typedef struct array_s
 {
@@ -25,7 +26,7 @@ typedef struct array_s
     void (*insert_c)(struct array_s *this, size_t pos, const char *str);
     void (*sort)(struct array_s *this, int (*cmp)(char const *, char const *));
     void (*delete)(struct array_s *this, size_t pos);
-    void (*merge_c)(struct array_s *this, char **t);
+    void (*merge_c)(struct array_s *this, const char **t);
     void (*merge_t)(struct array_s *this, struct array_s *t);
     void (*clear)(struct array_s *this);
     void (*apply)(struct array_s *this, int (*f)(char *));
@@ -36,5 +37,10 @@ typedef struct array_s
 
 void array_init(array_t *this, const char **t);
 void array_destroy(array_t *this);
+int get_array_length(const char **t);
+void fill_array(array_t *this, const char **t);
+char **my_word_array_dup(const char **src);
+void free_word_array(char **tab);
+char *word_array_to_string(char **tab, char c);
 
 #endif

@@ -33,23 +33,13 @@ int get_array_length(const char **t)
     return count;
 }
 
-int my_strlen(char const *str)
-{
-    int nb = 0;
-
-    for (int i = 0; str[i] != '\0'; i++) {
-        nb++;
-    }
-    return nb;
-}
-
 void fill_array(array_t *this, const char **t)
 {
     int len = 0;
     int i = 0;
 
     for (i = 0; t[i] != NULL; i++) {
-        len = my_strlen(t[i]);
+        len = strlen(t[i]);
         this->tab[i] = malloc(sizeof(char) * (len + 1));
         for (int j = 0; t[i][j] != '\0'; j++) {
             this->tab[i][j] = t[i][j];
@@ -57,6 +47,53 @@ void fill_array(array_t *this, const char **t)
         this->tab[i][len] = '\0';
     }
     this->tab[i] = NULL;
+}
+
+char **my_word_array_dup(const char **src)
+{
+    int len = get_array_length(src);
+    char **tab = malloc(sizeof(char *) * (len + 1));
+
+    for (int i = 0; src[i] != NULL; i++) {
+        tab[i] = malloc(sizeof(char) * (strlen(src[i]) + 1));
+        strcpy(tab[i], src[i]);
+    }
+    tab[len] = NULL;
+    return tab;
+}
+
+void free_word_array(char **tab)
+{
+    for (int i = 0; tab[i] != NULL; i++) {
+        free(tab[i]);
+    }
+    free(tab);
+    tab = NULL;
+}
+
+char *word_array_to_string(char **tab, char c)
+{
+    int size = 0;
+    char *str = NULL;
+    int idx = 0;
+    int count = 0;
+
+    for (int i = 0; tab[i] != NULL; i++) {
+        size = size + strlen(tab[i]);
+        count++;
+    }
+    str = malloc(sizeof(char) * (size + count + 1));
+    for (int i = 0; tab[i] != NULL; i++) {
+        for (int j = 0; tab[i][j] != '\0'; j++, idx++) {
+            str[idx] = tab[i][j];
+        }
+        if (tab[i + 1] != NULL) {
+            str[idx] = c;
+            idx++;
+        }
+    }
+    str[idx] = '\0';
+    return str;
 }
 
 void init_struct(array_t *this)

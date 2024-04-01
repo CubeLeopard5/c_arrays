@@ -33,7 +33,9 @@ CC	= gcc
 
 RM	= rm -f
 
-CFLAGS = -Wall -Wextra -g3 -I ./includes/ -lcriterion
+CFLAGS = -Wall -Wextra -g3 -I ./includes/
+
+TEST_FLAGS = -I ./includes/ -lcriterion;
 
 all:	$(NAME) $(TEST_NAME)
 
@@ -41,7 +43,7 @@ $(NAME):	$(OBJS)
 	$(CC) -o $(NAME) $(OBJS) $(CFLAGS)
 
 $(TEST_NAME):	$(TEST_OBJS)
-	$(CC) -o $(TEST_NAME) $(TEST_OBJS) $(CFLAGS)
+	$(CC) -o $(TEST_NAME) $(TEST_OBJS) $(CFLAGS) $(TEST_FLAGS)
 
 clean:
 	rm -f $(OBJS) $(TEST_OBJS)

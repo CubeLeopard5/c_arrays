@@ -10,7 +10,7 @@ Test(merge_c, merge_char_arrays) {
     array_init(&my_array2, elements2);
 
     // Merge the two arrays
-    my_array1.merge_c(&my_array1, my_array2.tab);
+    my_array1.merge_c(&my_array1, (const char **)my_array2.tab);
     
     // Assert that the size of the resulting array is correct
     cr_assert_eq(my_array1.size(&my_array1), 6);

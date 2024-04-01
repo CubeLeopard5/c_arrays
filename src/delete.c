@@ -15,12 +15,12 @@ static void delete(array_t *this, size_t pos)
         if (i == pos) {
             step = 1;
         } else {
-            t[i - step] = malloc(sizeof(char) * (my_strlen(this->tab[i]) + 1));
-            my_strcpy(t[i - step], this->tab[i]);
+            t[i - step] = malloc(sizeof(char) * (strlen(this->tab[i]) + 1));
+            strcpy(t[i - step], this->tab[i]);
         }
     }
     t[len - 1] = NULL;
     this->clear(this);
-    this->tab = my_word_array_dup(t);
+    this->tab = my_word_array_dup((const char **)t);
     free_word_array(t);
 }
