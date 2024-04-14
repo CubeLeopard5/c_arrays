@@ -33,7 +33,7 @@ CC	= gcc
 
 RM	= rm -f
 
-CFLAGS = -Wall -Wextra -g3 -I ./includes/
+CFLAGS = -Wall -Wextra -g3 -I ./include/
 
 TEST_FLAGS = -I ./includes/ -lcriterion;
 

@@ -1,4 +1,4 @@
-#include "../includes/array.h"
+#include "include.h"
 
 static char **occurrence(const array_t *this, const char *str, size_t n);
 

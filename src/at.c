@@ -1,4 +1,4 @@
-#include "../includes/array.h"
+#include "include.h"
 
 static char *at(const array_t *this, size_t pos);
 

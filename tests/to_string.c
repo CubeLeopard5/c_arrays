@@ -1,4 +1,4 @@
-#include "../includes/array.h"
+#include "include.h"
 #include <criterion/criterion.h>
 
 // Test case for converting the array to a string with a specified delimiter

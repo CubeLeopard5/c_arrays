@@ -1,4 +1,4 @@
-#include "../includes/array.h"
+#include "include.h"
 
 static void print(const array_t *this);
 

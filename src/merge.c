@@ -1,4 +1,4 @@
-#include "../includes/array.h"
+#include "include.h"
 
 static array_t *merge_c(array_t *this, const char **to_merge);
 

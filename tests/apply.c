@@ -1,4 +1,4 @@
-#include "../includes/array.h"
+#include "include.h"
 #include <criterion/criterion.h>
 #include <ctype.h>
 

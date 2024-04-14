@@ -1,4 +1,4 @@
-#include "../includes/array.h"
+#include "include.h"
 #include <criterion/criterion.h>
 
 // Test case for accessing an element at a valid position

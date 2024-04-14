@@ -1,4 +1,4 @@
-#include "../includes/array.h"
+#include "include.h"
 
 static array_t *sort(array_t *this, int (*cmp)(char const *, char const *));
 

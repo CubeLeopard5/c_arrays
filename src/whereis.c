@@ -1,4 +1,4 @@
-#include "../includes/array.h"
+#include "include.h"
 
 static int whereis(const array_t *this, const char *s);
 

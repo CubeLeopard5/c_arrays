@@ -1,4 +1,4 @@
-#include "../includes/array.h"
+#include "include.h"
 
 static array_t *push_back(array_t *this, const char *str);
 

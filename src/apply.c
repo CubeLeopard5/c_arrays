@@ -1,4 +1,4 @@
-#include "../includes/array.h"
+#include "include.h"
 
 static array_t *apply_on_match(array_t *this, int (*f)(char *), const char *data_ref, int (*cmp)());
 

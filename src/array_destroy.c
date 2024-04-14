@@ -1,4 +1,4 @@
-#include "../includes/array.h"
+#include "include.h"
 
 void array_destroy(array_t *this)
 {

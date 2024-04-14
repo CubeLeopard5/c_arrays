@@ -1,4 +1,4 @@
-#include "../includes/array.h"
+#include "include.h"
 #include <criterion/criterion.h>
 
 // Test case for clearing a non-empty array

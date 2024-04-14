@@ -5,7 +5,7 @@
 ** jhgfd
 */
 
-#include "../includes/array.h"
+#include "include.h"
 #include "print.c"
 #include "size.c"
 #include "whereis.c"

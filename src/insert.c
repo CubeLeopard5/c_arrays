@@ -1,4 +1,4 @@
-#include "../includes/array.h"
+#include "include.h"
 
 static array_t *insert_c(array_t *this, size_t pos, const char *str);
 

@@ -1,4 +1,4 @@
-#include "../includes/array.h"
+#include "include.h"
 
 static char *to_string(const array_t *this, const char c);
 

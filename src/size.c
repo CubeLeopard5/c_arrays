@@ -1,4 +1,4 @@
-#include "../includes/array.h"
+#include "include.h"
 
 static int size(const array_t *this);
 
