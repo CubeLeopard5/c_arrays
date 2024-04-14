@@ -1,8 +1,8 @@
 #include "../includes/array.h"
 
-static void sort(array_t *this, int (*cmp)(char const *, char const *));
+static array_t *sort(array_t *this, int (*cmp)(char const *, char const *));
 
-static void sort(array_t *this, int (*cmp)(char const *, char const *))
+static array_t *sort(array_t *this, int (*cmp)(char const *, char const *))
 {
     char *tmp = NULL;
 
@@ -15,4 +15,5 @@ static void sort(array_t *this, int (*cmp)(char const *, char const *))
             }
         }
     }
+    return this;
 }

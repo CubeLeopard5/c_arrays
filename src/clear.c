@@ -1,8 +1,8 @@
 #include "../includes/array.h"
 
-static void clear(array_t *this);
+static array_t *clear(array_t *this);
 
-static void clear(array_t *this)
+static array_t *clear(array_t *this)
 {
     if (this->tab != NULL) {
         for (int i = 0; this->tab[i] != NULL; i++) {
@@ -11,4 +11,5 @@ static void clear(array_t *this)
         free(this->tab);
         this->tab = NULL;
     }
+    return this;
 }
