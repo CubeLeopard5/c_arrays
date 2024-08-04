@@ -5,6 +5,8 @@
 ## script to build lib
 ##
 
+SRC			=	main.c
+
 ARRAY_SRC	=	src/array_init.c		\
 				src/array_destroy.c		\
 				
@@ -32,7 +34,7 @@ NAME		=	array
 
 TEST_NAME 	=	array_tests
 
-OBJS		=	$(ARRAY_SRC:.c=.o)
+OBJS		=	$(SRC:.c=.o) $(ARRAY_SRC:.c=.o)
 
 TEST_OBJS 	= $(ARRAY_SRC:.c=.o) $(TEST_SRC:.c=.o)
 

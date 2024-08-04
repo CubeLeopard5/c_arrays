@@ -19,6 +19,13 @@
 #include "clear.c"
 #include "apply.c"
 #include "occurrence.c"
+#include "contains.c"
+#include "filter.c"
+#include "find_all.c"
+#include "copy.c"
+#include "map.c"
+#include "reduce.c"
+#include "reverse.c"
 
 int get_array_length(const char **t)
 {
@@ -114,6 +121,13 @@ void init_struct(array_t *this)
     this->apply_on_match = &apply_on_match;
     this->occurrence_f = &occurrence_f;
     this->occurrence = &occurrence;
+    this->contains = &contains;
+    this->copy = &copy;
+    this->filter = &filter;
+    this->find_all = &find_all;
+    this->map = &map;
+    this->reduce = &reduce;
+    this->reverse = &reverse;
 }
 
 void array_init(array_t *this, const char **t)
