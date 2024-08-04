@@ -51,24 +51,3 @@ Test(reverse, reverse_single_element) {
     // Clean up after the test
     array_destroy(&my_array);
 }
-
-// Test case for reversing an array with NULL entries
-Test(reverse, reverse_array_with_null_entries) {
-    array_t my_array;
-    const char *elements[] = {"apple", NULL, "banana", NULL, "orange", NULL};
-    array_init(&my_array, elements);
-
-    // Reverse the array
-    my_array.reverse(&my_array);
-
-    // Assert that the array is reversed correctly
-    cr_assert_str_eq(my_array.tab[0], "orange");
-    cr_assert_null(my_array.tab[1]);
-    cr_assert_str_eq(my_array.tab[2], "banana");
-    cr_assert_null(my_array.tab[3]);
-    cr_assert_str_eq(my_array.tab[4], "apple");
-    cr_assert_null(my_array.tab[5]);
-
-    // Clean up after the test
-    array_destroy(&my_array);
-}

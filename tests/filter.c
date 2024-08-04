@@ -41,10 +41,11 @@ Test(filter, filter_elements_length_greater_than_5) {
     my_array.filter(&my_array, length_greater_than_5);
 
     // Assert that the array only contains elements with length greater than 5
-    cr_assert_eq(my_array.size(&my_array), 2);
+    cr_assert_eq(my_array.size(&my_array), 3);
     cr_assert_str_eq(my_array.tab[0], "banana");
     cr_assert_str_eq(my_array.tab[1], "avocado");
-    cr_assert_null(my_array.tab[2]);
+    cr_assert_str_eq(my_array.tab[2], "orange");
+    cr_assert_null(my_array.tab[3]);
 
     // Clean up after the test
     array_destroy(&my_array);

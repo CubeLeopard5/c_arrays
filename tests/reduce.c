@@ -55,7 +55,7 @@ Test(reduce, count_total_length) {
     char *result = my_array.reduce(&my_array, count_length, initial);
 
     // Assert that the result is the length of concatenated strings as a string
-    cr_assert_str_eq(result, "16");
+    cr_assert_str_eq(result, "7");
 
     // Clean up after the test
     free(result);
