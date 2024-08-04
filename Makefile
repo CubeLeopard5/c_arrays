@@ -20,6 +20,13 @@ TEST_SRC	=	tests/at.c				\
 				tests/sort.c			\
 				tests/to_string.c		\
 				tests/whereis.c			\
+				tests/contains.c		\
+				tests/copy.c			\
+				tests/filter.c			\
+				tests/find_all.c		\
+				tests/map.c				\
+				tests/reduce.c			\
+				tests/reverse.c			\
 
 NAME		=	array
 
