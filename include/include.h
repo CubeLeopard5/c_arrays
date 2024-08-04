@@ -33,6 +33,13 @@ typedef struct array_s
     struct array_s *(*apply_on_match)(struct array_s *this, int (*f)(char *), const char *data_ref, int (*cmp)());
     char *(*occurrence_f)(const struct array_s *this, const char *str);
     char **(*occurrence)(const struct array_s *this, const char *str, size_t n);
+    struct array_s *(*reverse)(struct array_s *this);
+    struct array_s *(*filter)(struct array_s *this, int (*func)(const char *));
+    struct array_s *(*map)(struct array_s *this, char *(*mapper)(const char *));
+    char *(*reduce)(const struct array_s *this, char *(*reducer)(char *, const char *), char *initial);
+    int (*contains)(const struct array_s *this, const char *str);
+    struct array_s *(*copy)(const struct array_s *this);
+    size_t *(*find_all)(const struct array_s *this, const char *str, size_t *count);
 } array_t;
 
 void array_init(array_t *this, const char **t);

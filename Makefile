@@ -35,7 +35,7 @@ RM	= rm -f
 
 CFLAGS = -Wall -Wextra -g3 -I ./include/
 
-TEST_FLAGS = -I ./includes/ -lcriterion;
+TEST_FLAGS = -I ./include/ -lcriterion;
 
 all:	$(NAME) $(TEST_NAME)
 
